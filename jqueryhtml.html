@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jquery Html</title>
+    <script src="js/jquery-3.0.0.min.js"></script>
+</head>
+<body>
+                <h1>JQuery HTML</h1>
+                <hr>
+                <h2>Obten el contenido</h2>
+                <p>Se puede utilizar los elementos usando los siguientes metodos</p>
+                            <ul>
+                                <li>text</li>
+                                <li>html</li>
+                                <li>val</li>
+                            </ul>
+                <p>En <b>text</b> imprime texto plano,en <b>html</b> imprime texto pero con formato de html y val obtiene el <b>valor</b> del elemento de html.</p>
+                <p>Ejemplo</p>
+                <p id = "cambiartexto">Hola mundo</p>
+                <p id="id1">Estoy aprendiendo JQuery</p>
+                <p id="id2">Saludos a todos</p>                                                                                                                        
+                        <script>                                        
+                                        $(document).ready(function(){                                                
+                                                    alert($("#cambiartexto").text());                                                                                                                           
+                                                    alert($("#id1").html());                                                                                                                           
+                                                    alert($("#id2").val());                                                                                                                           
+                                        });
+                        </script>
+                <h2></h2>
+                <h2></h2>
+                <h2></h2>
+                <h2></h2>
+</body>
+</html>
