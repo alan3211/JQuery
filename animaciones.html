@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="js/jquery-3.0.0.min.js"></script>
+    <script>
+            $(document).ready(function(){
+                
+                $("button").on({
+                            click : function(){
+                                        $("div").animate({
+                                                    left: '250px',
+                                                    opacity: '0.5',
+                                                    width : '+=150px',
+                                                    height: '+=150px'                           
+                                        });              
+                            },
+                            mouseenter : function(){
+                                        $("div").animate({
+                                                    left: '250px',
+                                                    opacity: '0.5',
+                                                    width : '-=150px',
+                                                    height: '-=150px'                           
+                                        });           
+                            }
+                });                                    
+            });
+    </script>
+</head>
+<body>
+           <button>Presiona aquí</button>
+            <div style="background:#98bf21;height:100px;width:100px;position:absolute;"></div>
+</body>
+</html>

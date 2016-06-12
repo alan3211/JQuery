@@ -3,11 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
+    <script src="js/jquery-3.0.0.min.js"></script>
 </head>
 <body>
         <p id="hola">Hola alan</p>
         <script>
-               $("#hola").css("color","red");
+                $(document).ready(function(){
+                        $("#hola").click(function(){
+                            $("#hola").css("color","blue");
+                        });
+                });
+        </script>
+        <p id="prueba">Este es mi prueba con los eventos de JQuery pero sirve para manipular esto a traves de DOM
+        </p>        
+        <script>
+                    $(document).ready(function(){
+                                $("#prueba").click(function(){
+                                        $("#prueba").css("color","red");    
+                                });                                
+                                $("#prueba").mouseenter(function(){
+                                        $("#prueba").css("background","#FE4367");    
+                                });                        
+                                $("#prueba").mouseleave(function(){
+                                        $("#prueba").css("background","#114367");    
+                                });
+                                $("#prueba").dblclick(function(){
+                                        $("#prueba").css("color","green");    
+                                });                                
+                    });
+        </script>
+        <h2>Usando el metodo on</h2>
+        <hr>
+        <p class="prueba2">Esta es mi segundo intento con JQuery</p>
+        <script>
+                    //Tomando el valor de la clase por JQuery
+                    $(".prueba2").on({
+                        /*Se crean objetos*/
+                        click :  function(){
+                                            $(this).css("background","lightgray");
+                                    }
+                        ,
+                        mouseenter : function(){
+                                                        $(this).css("background","lightblue");
+                                                  }
+                        ,
+                        mouseleave: function(){
+                                                        $(this).css("background","yellow");          
+                                                  }                                        
+                    });
         </script>
 </body>
 </html>

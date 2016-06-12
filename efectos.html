@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hola Efectos</title>
+    <script src="js/jquery-3.0.0.min.js"></script>
+</head>
+        <body>
+                    <p>Este parrafo desaparecera en algun momento</p> 
+                    <button id="oculta">Oculta texto</button>                   
+                    <button id="muestra">Muestra texto</button>                   
+                    <script>
+                                $("#oculta").click( function(){
+                                            $("p").hide(1000);
+                                });
+                                                   
+                                 $("#muestra").click(function(){
+                                            $("p").show(1000);                                                             
+                                });            
+                    </script>
+                    <p id="toogle">Con este metodo puedes hacer el efecto</p>
+                    <script>
+                                $("#toogle").click(function(){
+                                        $(this).toggle(1000);
+                                });
+                    </script>
+                    
+                    <h3>Ingresa un atributo para css</h3>
+                    <input type="text"  name="atributo"/>
+                    <h3>Ingresa un valor para  el atributo</h3>
+                    <input type="text"  name="valor"/>
+                    <button>Aplica</button>
+                    
+                    <p id="mensaje">Mi mensaje</p>
+                    
+                    <script>
+                                var $atributo,$valor;
+                                $("button").click(function(){
+                                        $atributo = $("[name='atributo']").val();
+                                        $valor = $("[name='valor']").val();
+                                        $("#mensaje").css($atributo,$valor);
+                                });   
+                    </script>                                                                                
+        </body>
+</html>
