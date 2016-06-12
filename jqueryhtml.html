@@ -15,21 +15,63 @@
                                 <li>html</li>
                                 <li>val</li>
                             </ul>
-                <p>En <b>text</b> imprime texto plano,en <b>html</b> imprime texto pero con formato de html y val obtiene el <b>valor</b> del elemento de html.</p>
+                <p>En <b>text</b> imprime texto plano,en <b>html</b> imprime texto pero con formato de html y val obtiene el <b>valor</b> en un input para ingresar algun dato desde un formulario.</p>
                 <p>Ejemplo</p>
                 <p id = "cambiartexto">Hola mundo</p>
-                <p id="id1">Estoy aprendiendo JQuery</p>
-                <p id="id2">Saludos a todos</p>                                                                                                                        
+                <p id="id1">Estoy aprendiendo <b>JQuery</b></p>                                                                                                                                  
                         <script>                                        
                                         $(document).ready(function(){                                                
                                                     alert($("#cambiartexto").text());                                                                                                                           
-                                                    alert($("#id1").html());                                                                                                                           
-                                                    alert($("#id2").val());                                                                                                                           
+                                                    alert($("#id1").html());                                                                                                                                                                                                                                   
                                         });
                         </script>
-                <h2></h2>
-                <h2></h2>
-                <h2></h2>
+                <h2>Obteniendo Atributos</h2>
+                <hr>
+                <p>Para obtener el valor de un atributo de un elemento de html podemos usar el metodo <b>attr</b>.</p>
+                <p>Ejemplo</p>
+                       <a href="www.google.com" name='enlace'>Enlace oculto</a>
+                        <script>
+                                        $(document).ready(function(){
+                                                var link = $("[name='enlace']").attr("href");
+                                                alert(link);
+                                        });
+                        </script>
+                <h2>Estableciendo el contenido</h2>
+                <hr>
+                <p>Como vimos anteriormente en la obtención del contenido podemos establecer nuevo contenido indicando en su párametro</p>
+                <p>Ejemplo</p>
+                <p id="test1">This is a paragraph.</p>
+                <p id="test2">This is another paragraph.</p>
+                <p>Input field: <input type="text" id="test3" value="Mickey Mouse"></p>
+                <button id="btn1">Set Text</button>
+                <button id="btn2">Set HTML</button>
+                <button id="btn3">Set Value</button>
+                <script>
+                            $(document).ready(function(){
+                                $("#btn1").click(function(){
+                                    $("#test1").text("Hello world!");
+                                });
+                                $("#btn2").click(function(){
+                                    $("#test2").html("<b>Hello world!</b>");
+                                });
+                                $("#btn3").click(function(){
+                                    $("#test3").val("Dolly Duck");
+                                });
+                            });
+              </script>               
+                <h2>Estableciendo atributos</h2>
+                <hr>
+                <p>Podemos ingresar valores a los atributos que nosotros deseemos con el atributo <b>attr</b> pero con 2 párametros adicionales</p>
+                <p>Ejemplo</p>
+                <a id="enlace1"></a>
+                        <script>  
+                                    $(document).ready(function(){
+                                                $("#enlace1").attr({
+                                                            'href': 'www.facebook.com',
+                                                            'title' : 'Enlace a facebook'
+                                                });
+                                    });
+                        </script>
                 <h2></h2>
 </body>
 </html>
